@@ -32,7 +32,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pyflake
       run: |
-        pyflakes checkPath /
+        pyflakes .
     - name: Test with pytest
       run: |
         pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov --cov-report=xml --cov-report=html
