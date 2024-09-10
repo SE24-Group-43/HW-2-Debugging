@@ -29,10 +29,14 @@ jobs:
         pip install flake8 pytest pytest-cov
         pip install flake8-html
         pip install pyflakes
+        pip install pylint
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pyflake
       run: |
-        pyflakes *.py
+        pyflakes hw2_debugging.py rand.py
+    - name: Test with pylint
+      run:
+        pylint hw2_debugging.py rand.py      
     - name: Test with pytest
       run: |
         pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov --cov-report=xml --cov-report=html
