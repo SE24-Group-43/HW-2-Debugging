@@ -28,9 +28,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest pytest-cov
         pip install flake8-html
+        pip install autopep8
         pip install pyflakes
         pip install pylint
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Test with autopep8
+      run: 
+          autopep8 hw2_debugging.py rand.py
     - name: Test with pyflake
       run: |
         pyflakes hw2_debugging.py rand.py
