@@ -47,8 +47,11 @@ jobs:
     - name: Generate pylint badge
     - uses: Silleellie/pylint-github-action@v2
       with:
-          lint-path: src  
-          python-version: 3.13  
+          lint-path: |
+            hw2_debugging.py
+            rand.py
+          python-version: 3.12
+          readme-path: README.md
     - name: Test with pytest
       run: |
         pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov --cov-report=xml --cov-report=html
