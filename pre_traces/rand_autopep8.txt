@@ -1,3 +1,6 @@
+[file:rand.py]
+--->  3 issue(s) to fix {'E302': {4}, 'E231': {7}, 'E501': {8}}
+--->  0 issue(s) to fix {}
 '''Python code to create an array with random elments'''
 import subprocess
 

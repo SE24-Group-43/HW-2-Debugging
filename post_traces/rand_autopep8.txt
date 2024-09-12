@@ -1,3 +1,5 @@
+[file:rand.py]
+--->  0 issue(s) to fix {}
 '''Python code to create an array with random elments'''
 import subprocess
 

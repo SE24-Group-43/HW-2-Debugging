@@ -7,7 +7,7 @@ def merge_sort(a):
     if len(a) == 1:
         return arr
 
-    half = len(a) // 2
+    half = len(a)//2
 
     return recombine(merge_sort(a[:half]), merge_sort(a[half:]))
 
