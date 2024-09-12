@@ -45,7 +45,7 @@ jobs:
       run:
         pylint hw2_debugging.py rand.py  
     - name: Generate pylint badge
-    - uses: Silleellie/pylint-github-action@v2
+      uses: Silleellie/pylint-github-action@v2
       with:
           lint-path: |
             hw2_debugging.py
