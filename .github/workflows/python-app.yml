@@ -47,7 +47,9 @@ jobs:
     - name: Generate pylint badge
     - uses: Silleellie/pylint-github-action@v2
       with:
-          lint-path: src  
+          lint-path: |
+            hw2_debugging.py
+            rand.py
           python-version: 3.13  
     - name: Test with pytest
       run: |
