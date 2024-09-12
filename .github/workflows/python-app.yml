@@ -44,14 +44,6 @@ jobs:
     - name: Test with pylint
       run:
         pylint hw2_debugging.py rand.py  
-    - name: Generate pylint badge
-      uses: Silleellie/pylint-github-action@v2
-      with:
-          lint-path: |
-            hw2_debugging.py
-            rand.py
-          python-version: "3.x"
-          readme-path: README.md
     - name: Test with pytest
       run: |
         pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov --cov-report=xml --cov-report=html
