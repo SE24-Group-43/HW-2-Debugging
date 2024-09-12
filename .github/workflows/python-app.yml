@@ -50,7 +50,7 @@ jobs:
           lint-path: |
             hw2_debugging.py
             rand.py
-          python-version: 3.13
+          python-version: "3.x"
           readme-path: README.md
     - name: Test with pytest
       run: |
