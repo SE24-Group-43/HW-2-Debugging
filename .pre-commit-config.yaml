@@ -1,6 +1,9 @@
 repos:
-  - repo: https://github.com/hhatto/autopep8
+  - repo: local
     hooks:
-      - id: autopep8
-        rev: v2.3.1
-        name: autopep8
+      - id: tests
+        name: run-tests
+        languages: script
+        entry: ./run_tests.sh
+        stages: [commit]
+        
