@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -50,7 +50,7 @@ jobs:
           lint-path: |
             hw2_debugging.py
             rand.py
-          python-version: 3.12
+          python-version: 3.13
           readme-path: README.md
     - name: Test with pytest
       run: |
