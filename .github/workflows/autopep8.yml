@@ -20,4 +20,6 @@ jobs:
         pip install autopep8
     - name: Analysing the code with autopep8
       run: |
-        autopep8 --in-place --recursive .
+        autopep8 hw2_debugging.py -v
+        autopep8 rand.py -v
+        autopep8 tests.py -v
