@@ -20,4 +20,4 @@ jobs:
         pip install autopep8
     - name: Analysing the code with pylint
       run: |
-        autopep8 $(git ls-files '*.py') -v
+        autopep8 --in-place --recursive .
