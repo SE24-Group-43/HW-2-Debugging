@@ -4,14 +4,14 @@ import rand
 
 def merge_sort(a):
     '''This function is merging the sorted arrays'''
-    #print(a)
+    # print(a)
     if len(a) <= 1:
         return a
 
     half = len(a) // 2
 
     return recombine(merge_sort(a[:half]), merge_sort(a[half:]))
-    #return recombine(merge_sort(a[:half]), merge_sort(a[half:]))
+    # return recombine(merge_sort(a[:half]), merge_sort(a[half:]))
 
 
 def recombine(left_arr, right_arr):
@@ -39,4 +39,3 @@ def recombine(left_arr, right_arr):
 arr = rand.random_array([None] * 20)
 arr_out = merge_sort(arr)
 print(arr_out)
-
