@@ -35,13 +35,13 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test random file with autopep8
       run: 
-          autopep8 rand.py
+          autopep8 rand.py -v
     - name: Test sort file with autopep8
       run:
           autopep8 hw2_debugging.py
     - name: Test random file with pyright
       run: |
-        pyright rand.py
+        pyright rand.py -v
     - name: Test merge sort file with pyright
       run: |
         pyright hw2_debugging.py
