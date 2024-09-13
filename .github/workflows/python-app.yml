@@ -31,16 +31,20 @@ jobs:
         pip install autopep8
         pip install pyflakes
         pip install pylint
+        pip install pyright
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test random file with autopep8
       run: 
-          autopep8 rand.py
+          autopep8 -v rand.py
     - name: Test sort file with autopep8
       run:
-          autopep8 hw2_debugging.py
-    - name: Test with pyflake
+          autopep8 -v hw2_debugging.py
+    - name: Test random file with pyright
       run: |
-        pyflakes hw2_debugging.py rand.py
+        pyright rand.py
+    - name: Test merge sort file with pyright
+      run: |
+        pyright hw2_debugging.py
     - name: Test with pylint
       run:
         pylint hw2_debugging.py rand.py  
