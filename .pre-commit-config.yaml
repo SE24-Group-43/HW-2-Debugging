@@ -1,9 +1,37 @@
 repos:
+  - repo: https://github.com/PyCQA/pylint
+    rev: v3.2.7
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
   - repo: local
     hooks:
-      - id: tests
-        name: run-tests
-        languages: script
-        entry: ./run_tests.sh
-        stages: [commit]
-        
+      - id: run-pytests
+        name: run-pytests
+        entry: bash -c 'pytest tests.py'
+        language: system
+        types: [python]
+  - repo: local
+    hooks:
+      - id: run-autopep8
+        name: run-autopep8
+        entry: bash -c 'autopep8 hw2_debugging.py && autopep8 rand.py && autopep8 tests.py'
+        language: system
+        types: [python]
+  - repo: local
+    hooks:
+      - id: run-pylint
+        name: run-pylint
+        entry: bash -c 'pylint hw2_debugging.py && pylint rand.py && pylint tests.py'
+        language: system
+        types: [python]
+  - repo: local
+    hooks:
+      - id: run-pyright
+        name: run-pyright
+        entry: bash -c 'pyright hw2_debugging.py && pyright rand.py && pyright tests.py'
+        language: system
+        types: [python]

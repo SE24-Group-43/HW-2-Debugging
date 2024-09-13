@@ -1,3 +1,2 @@
 #!/bin/bash
-python pytest tests.py;
-
+pytest tests.py
